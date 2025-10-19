@@ -9,66 +9,72 @@
  </head>
  <body>
 
-     <h1>Reservation Hotel Room</h1>
+    <h1>Reservation Hotel Room</h1>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="#" method="post">
 
         <!-- Personal Data -->
         <fieldset>
             <legend>Personal Data</legend>
 
-            <label for="nama"><strong>1. Nama</strong></label><br />
-            <input type="text" id="nama" name="nama" size="30" /><br />
+            <label for="full_name"><strong>1. Nama</strong></label>
+            <input type="text" id="full_name" name="full_name" size="30" required /><br />
             <br />
 
-            <label for="gender"><strong>2. Gender</strong></label><br />
-            <input type="text" id="gender" name="gender" size="30" /><br />
+            <label for="gender"><strong>2. Gender</strong></label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select><br />
             <br />
 
-            <label for="email"><strong>3. Email Address</strong></label><br />
-            <input type="text" id="email" name="email" size="30" /><br />
+            <label for="email"><strong>3. Email Address</strong></label>
+            <input type="email" id="email" name="email" size="30" required /><br />
             <br />
 
-            <label for="Telp"><strong>4. Telp Number</strong></label><br />
-            <input type="text" id="Telp" name="Telp" size="30" />
+            <label for="telp"><strong>4. Telp Number</strong></label>
+            <input type="tel" id="telp" name="telp" size="30" required />
         </fieldset>
 
         <!-- Reservation Room -->
         <fieldset>
             <legend>Reservation Room Form</legend>
 
-            <label for="nama"><strong>1. Reservation Name</strong></label><br />
-            <input type="text" id="nama" name="nama" size="30" /><br />
+            <label for="reservation_name"><strong>1. Reservation Name</strong></label>
+            <input type="text" id="reservation_name" name="reservation_name" size="30" required /><br />
             <br />
 
-            <label for="gender"><strong>2. Booking Date</strong></label><br />
-            <input type="text" id="gender" name="gender" size="30" /><br />
+            <label for="booking_date"><strong>2. Booking Date</strong></label>
+            <input type="date" id="booking_date" name="booking_date" required /><br />
             <br />
 
-            <label for="gender"><strong>3. Booking Date</strong></label><br />
-            <select id="room_type" name="room_type">
-            <option value="deluxe">Deluxe</option>
-            <option value="standard">Standard</option>
-            <option value="suite">Suite</option>
-            <option value="family">Family</option>
+            <label for="room_type"><strong>3. Room Type</strong></label>
+            <select id="room_type" name="room_type" required>
+                <option value="deluxe">Deluxe</option>
+                <option value="standard">Standard</option>
+                <option value="suite">Suite</option>
+                <option value="family">Family</option>
             </select>
             <br /><br />
 
-            <label for="gender"><strong>4. Bed Type</strong></label><br />
-            <select id="room_type" name="room_type">
-            <option value="single">Single bed</option>
-            <option value="double">Double bed</option>
-            <option value="king">King bed</option>
+            <label for="bed_type"><strong>4. Bed Type</strong></label>
+            <select id="bed_type" name="bed_type" required>
+                <option value="single">Single bed</option>
+                <option value="double">Double bed</option>
+                <option value="king">King bed</option>
             </select>
             <br /><br />
 
-            <label><strong>5. Breakfast</strong></label><br />
-            <input type="radio" id="with_breakfast" name="breakfast_option" value="with">
-            <label for="with_breakfast">With Breakfast</label>
+            <label><strong>5. Breakfast</strong></label>
+            <div class="radio-group">
+                <input type="radio" id="with_breakfast" name="breakfast_option" value="with" checked>
+                <label for="with_breakfast">With Breakfast</label>
 
-            <input type="radio" id="without_breakfast" name="breakfast_option" value="without">
-            <label for="without_breakfast">Without Breakfast</label>
-
+                <input type="radio" id="without_breakfast" name="breakfast_option" value="without">
+                <label for="without_breakfast">Without Breakfast</label>
+            </div>
         </fieldset>
         <br />
 
@@ -76,27 +82,26 @@
         <fieldset>
             <legend>Payment</legend>
 
-            <label for="Checkin"><strong>1. Check In Date</strong></label><br />
-            <input type="text" id="Checkin" name="Checkin" size="30" /><br />
-            <br>
+            <label for="check_in"><strong>1. Check In Date</strong></label>
+            <input type="date" id="check_in" name="check_in" required /><br />
+            <br />
 
-            <label for="Checkout"><strong>2. Check Out Date</strong></label><br />
-            <input type="text" id="Checkout" name="Checkout" size="30" /><br />
-            <br>
+            <label for="check_out"><strong>2. Check Out Date</strong></label>
+            <input type="date" id="check_out" name="check_out" required /><br />
+            <br />
 
-            <label for="Payment"><strong>3. Payment Method</strong></label><br />
-            <select id="Payment_Type" name="Payment_Type">
-            <option value="cash">Cash</option>
-            <option value="Qris">Qris</option>
-            <option value="Debit">Debit</option>
+            <label for="payment_type"><strong>3. Payment Method</strong></label>
+            <select id="payment_type" name="payment_type" required>
+                <option value="cash">Cash</option>
+                <option value="qris">Qris</option>
+                <option value="debit">Debit</option>
             </select>
 
         </fieldset>
-
         <br />
-        <input type="submit" value="Submit">
+        
+        <input type="submit" value="Submit Reservation">
 
-    </form> 
- </body>
-
+    </form>
+</body>
 </html>
