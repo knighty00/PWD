@@ -1,8 +1,7 @@
-/* --- Global & Body Styling --- */
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #fff8e1; /* Warna krem hangat untuk latar belakang */
-  color: #5d4037; /* Warna cokelat tua untuk teks agar mudah dibaca */
+  background-color: #fff8e1; /* Warm cream background */
+  color: #5d4037; /* Dark brown text for readability */
   line-height: 1.6;
   margin: 0;
   padding: 20px;
@@ -11,7 +10,7 @@ body {
 /* --- Main Title --- */
 h1 {
   text-align: center;
-  color: #bf360c; /* Warna oranye tua yang kuat untuk judul utama */
+  color: #bf360c; /* Strong dark orange for the main title */
   margin-bottom: 30px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -22,15 +21,15 @@ form {
   max-width: 700px;
   margin: 0 auto;
   padding: 30px;
-  background-color: #ffffff; /* Latar belakang putih bersih untuk form */
+  background-color: #ffffff; /* Clean white background for the form */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* --- Fieldset & Legend Styling --- */
 fieldset {
-  border: none; /* Menghilangkan border default */
-  border-top: 2px solid #ffab91; /* Garis atas oranye muda sebagai pemisah */
+  border: none; /* Remove default border */
+  border-top: 2px solid #ffab91; /* Light orange top line as a separator */
   margin-bottom: 25px;
   padding: 20px 0;
 }
@@ -38,9 +37,9 @@ fieldset {
 legend {
   font-size: 1.4em;
   font-weight: bold;
-  color: #e65100; /* Warna oranye untuk judul setiap bagian */
+  color: #e65100; /* Orange for section titles */
   padding: 0 10px;
-  margin-left: -10px; /* Menyesuaikan posisi agar rapi */
+  margin-left: -10px; /* Adjust position for neatness */
 }
 
 /* --- Label Styling --- */
@@ -48,35 +47,47 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #795548; /* Warna cokelat muda untuk label */
+  color: #795548; /* Light brown for labels */
 }
 
 /* --- Input Fields & Select Dropdowns --- */
 input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
 select {
   width: 100%;
   padding: 12px;
-  border: 1px solid #d7ccc8; /* Border cokelat sangat muda */
+  border: 1px solid #d7ccc8; /* Very light brown border */
   border-radius: 8px;
-  box-sizing: border-box; /* Agar padding tidak merusak layout */
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
   font-size: 1em;
-  transition: all 0.3s ease; /* Animasi transisi yang halus */
+  transition: all 0.3s ease; /* Smooth transition animation */
+  -webkit-appearance: none; /* Removes default Safari styling for date */
 }
 
-/* --- Efek saat input field di-klik (focus) --- */
+/* --- Focus effect for input fields --- */
 input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
 select:focus {
   outline: none;
-  border-color: #ff7043; /* Border menjadi oranye saat aktif */
+  border-color: #ff7043; /* Border becomes orange when active */
   box-shadow: 0 0 8px rgba(255, 112, 67, 0.4);
 }
 
 /* --- Radio Button Styling --- */
+.radio-group {
+  display: flex;
+  align-items: center;
+}
+
 input[type="radio"] {
   margin-right: 5px;
 }
 
-/* Memberi jarak antar pilihan radio button */
+/* Space between radio button options */
 input[type="radio"] + label {
   display: inline-block;
   margin-right: 20px;
@@ -87,7 +98,7 @@ input[type="radio"] + label {
 input[type="submit"] {
   width: 100%;
   padding: 15px;
-  background-color: #ff5722; /* Warna oranye terang untuk tombol utama */
+  background-color: #ff5722; /* Bright orange for the main button */
   color: white;
   border: none;
   border-radius: 8px;
@@ -97,9 +108,9 @@ input[type="submit"] {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* --- Efek saat kursor di atas tombol submit --- */
+/* --- Hover effect for the submit button --- */
 input[type="submit"]:hover {
-  background-color: #e64a19; /* Warna menjadi sedikit lebih gelap */
-  transform: translateY(-2px); /* Tombol sedikit terangkat */
+  background-color: #e64a19; /* Color darkens slightly */
+  transform: translateY(-2px); /* Button lifts slightly */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
