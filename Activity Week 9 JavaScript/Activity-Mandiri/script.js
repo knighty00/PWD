@@ -34,12 +34,10 @@ function fn_ValForm() {
   }
 
   // 5. Tampilkan Peringatan jika ada error (masih sama)
-  if (sMsg != "") {
+if (sMsg != "") {
     alert("Peringatan:\n" + sMsg);
-    return false;
+    return false; // <-- Menghentikan pengiriman form
   } else {
-    // Jika tidak ada error (sMsg == ""), return true
-    // dan form akan terkirim
-    return true;
+    return true; // <-- Memperbolehkan pengiriman form
   }
 }
